@@ -17,7 +17,7 @@
     "deploy": "gh-pages -d dist",
     "dev": "cross-env NODE_ENV=dev webpack-dev-server --open --config webpack.config.js",
     "docker:build": "docker build -t treve-coming-soon .",
-    "docker:run": "docker run -p 3005:80 -d -name treve-coming-soon",
+    "docker:run": "docker run -p 3005:80 --name trevecs -d treve-coming-soon",
     "lint": "eslint src/js",
     "lint:fix": "npm run lint -- --fix",
     "start": "npm run dev"
