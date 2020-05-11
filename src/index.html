@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Treve</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--===============================================================================================-->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./public/images/favicon.ico"
+    />
+    <!--===============================================================================================-->
+  </head>
+  <body>
+    <div class="size1 bg0 where1-parent">
+      <!-- Coutdown -->
+      <div
+        class="flex-c-m bg-img1 size2 where1 overlay1 where2 respon2"
+        style="background-image: url('./public/images/background.jpg');"
+      >
+        <div class="wsize2 flex-w flex-c-m cd100 js-tilt">
+          <div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+            <span class="l2-txt1 p-b-9 days">35</span>
+            <span class="s2-txt4">Days</span>
+          </div>
+
+          <div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+            <span class="l2-txt1 p-b-9 hours">17</span>
+            <span class="s2-txt4">Hours</span>
+          </div>
+
+          <div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+            <span class="l2-txt1 p-b-9 minutes">50</span>
+            <span class="s2-txt4">Minutes</span>
+          </div>
+
+          <div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+            <span class="l2-txt1 p-b-9 seconds">39</span>
+            <span class="s2-txt4">Seconds</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div
+        class="size3 flex-col-sb flex-w p-l-75 p-r-75 p-t-45 p-b-45 respon1"
+        id="my-form"
+      >
+        <div class="wrap-pic1">
+          <img src="./public/images/logo.png" alt="LOGO" />
+        </div>
+
+        <div class="p-t-50 p-b-60">
+          <p class="m1-txt1 p-b-36">
+            <span class="m1-txt2" style="color:cadetblue;">Treve</span>, the
+            future of barbershops is
+            <span class="m1-txt2">about to launch 🚀</span>, be part of it!
+          </p>
+
+          <div
+            id="success-alert"
+            style="display: none;"
+            class="alert alert-success alert-dismissible"
+            data-alert="alert"
+          >
+            <a href="#" class="close" data-dismiss="alert" aria-label="close"
+              >&times;</a
+            >
+            🎉 <strong> Great! </strong> You are now on the waiting list. You
+            will receive an email when our app launches.
+          </div>
+
+          <div
+            id="already-subscribed-alert"
+            style="display: none;"
+            class="alert alert-warning alert-dismissible"
+            data-alert="alert"
+          >
+            <a href="#" class="close" data-dismiss="alert" aria-label="close"
+              >&times;</a
+            >
+            👍 <strong>Good news!</strong> You email it's already on the waiting
+            list.
+          </div>
+
+          <div
+            id="error-alert"
+            style="display: none;"
+            class="alert alert-danger alert-dismissible"
+            data-alert="alert"
+          >
+            <a href="#" class="close" data-dismiss="alert" aria-label="close"
+              >&times;</a
+            >
+            🥺 <strong>Oops! </strong> An error has ocurred in our side. Please
+            try again.
+          </div>
+
+          <form class="contact100-form validate-form">
+            <div
+              class="wrap-input100 m-b-20 validate-input"
+              data-validate="Email is required: ex@abc.xyz"
+            >
+              <input
+                class="s2-txt1 placeholder0 input100"
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Email Address"
+              />
+              <span class="focus-input100"></span>
+            </div>
+
+            <div class="w-full">
+              <button class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04">
+                Subscribe
+              </button>
+            </div>
+          </form>
+
+          <p class="s2-txt3 p-t-18">
+            And don’t worry, we hate spam too! You can unsubcribe at anytime.
+          </p>
+        </div>
+
+        <div class="flex-w">
+          <a href="#" class="flex-c-m size5 bg3 how1 trans-04 m-r-5">
+            <i class="fa fa-facebook"></i>
+          </a>
+
+          <a href="#" class="flex-c-m size5 bg4 how1 trans-04 m-r-5">
+            <i class="fa fa-twitter"></i>
+          </a>
+
+          <a href="#" class="flex-c-m size5 bg5 how1 trans-04 m-r-5">
+            <i class="fa fa-youtube-play"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendor/bootstrap/js/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/countdowntime/moment.min.js"></script>
+    <script src="vendor/countdowntime/moment-timezone.min.js"></script>
+    <script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+
+    <script>
+      $(".cd100").countdown100({
+        /*Set Endtime here*/
+        /*Endtime must be > current time*/
+        endtimeYear: 2020,
+        endtimeMonth: 8,
+        endtimeDate: 1,
+        endtimeHours: 00,
+        endtimeMinutes: 0,
+        endtimeSeconds: 0,
+        timeZone: "America/New_York",
+      });
+    </script>
+
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+      $(".js-tilt").tilt({
+        scale: 1.1,
+      });
+    </script>
+
+  </body>
+</html>
