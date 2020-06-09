@@ -3,7 +3,7 @@ import '../scss/index.scss';
 (function($) {
   'use strict';
 
-  var treveApi = 'https://api.treve.app/subscriptions';
+  var treveApi = 'https://api.treve.app/v0/subscriptions';
   var externalIP = 'unknown';
 
   $(document).ready(function() {
